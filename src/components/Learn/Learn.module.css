@@ -1,0 +1,9 @@
+.russianWord {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    color: #124F85;
+}
+.englishWord {
+    margin-bottom: 20px;
+}

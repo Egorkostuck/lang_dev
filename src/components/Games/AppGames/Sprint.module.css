@@ -1,0 +1,58 @@
+.sprintContainer{
+    max-width: 1020px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+.sprintTimerContainer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    box-sizing: border-box;
+    box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.18), inset 2px 2px 4px rgba(0, 0, 0, 0.24), inset -8px -8px 15px rgba(255, 255, 255, 0.02), inset 8px 8px 15px rgba(10, 46, 82, 0.21);
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+.sprintTimer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ear{
+    margin-bottom: 20px;
+}
+.btnNo {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background-color: red;
+    border-radius: 20px;
+}
+.btnYes {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background-color: green;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+.listenRusWord{
+    margin: 50px 0;
+}
+.sprintRusWord{
+    font-size: 26px;
+}

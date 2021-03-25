@@ -1,0 +1,58 @@
+.containerButtonSignUp {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.buttonSignUp {
+    width: 80px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 50px;
+    font-weight: bold;
+    background-color: #265B91;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.containerForm {
+    width: 400px;
+    height: 400px;
+    background-color: #265B91;
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+}
+.titleLogin {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+.inputLogin {
+    width: 180px;
+    height: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 3px;
+    outline: none;
+}
+.errors{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color:red;
+}
+
+.buttonLogin {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    box-sizing: border-box;
+}

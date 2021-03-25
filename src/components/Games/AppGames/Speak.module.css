@@ -1,0 +1,46 @@
+.speakContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: middle;
+}
+
+.speakContainer .randWord {
+    margin: 42px auto;
+    font-size: 72px;
+}
+.textVoice {
+    margin: 0 auto;
+}
+.textVoice .done {
+    display: none;
+}
+
+.btnMicro {
+    width: 42px;
+    height: 93px;
+}
+.speakContainer .btnMicro {
+    margin: 50px auto;
+}
+.btnSkip{
+    width: 332px;
+    height: 94px;
+    box-shadow: 2px 2px 5px rgba(10, 46, 82, 0.16), -8px -8px 40px rgba(255, 255, 255, 0.56), 8px 8px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 47px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0A2E52;
+    cursor: pointer;
+    transition: .6s;
+    margin: 0 auto;
+    outline: none;
+}
