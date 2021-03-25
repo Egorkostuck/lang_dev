@@ -3,6 +3,8 @@ import styles from './SignIn.module.css';
 import styleUp from './SignUp.module.css';
 import {NavLink} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = (props) => {
     
@@ -11,18 +13,42 @@ const SignUp = (props) => {
     const validators = {
         required: 'The field can not be empty'
     };
+
+    const errorToast = () => {
+        toast.error('this name or email is already in use!', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
+
+    const successToast = () => {
+        toast.success('Registration completed successfully!', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
    
     const onSubmit = (newUser) => {        
         const addNewUser = () => {
             props.setUsers([...props.users, newUser]);
             localStorage.setItem('users', JSON.stringify([...props.users, newUser]));
-        }    
+            successToast();
+        };
         if(props.users.length !== 0) {
-            props.users.find(item => (item.name === newUser.name || item.email === newUser.email) ) ? alert('this name or email is already in use ')  : addNewUser();
+            props.users.find(item => (item.name === newUser.name || item.email === newUser.email) ) ? errorToast()  : addNewUser();
         } else {
             addNewUser();      
-        }
-        
+        }        
     };
     console.log(props.users);
     return(
@@ -42,6 +68,12 @@ const SignUp = (props) => {
                 <p className={styles.errors}>{errors.password && errors.password.message}  </p>  
                 <button type="submit" className={styles.buttonLogin} disabled={(errors.name && errors.name.message) || (errors.email && errors.email.message) || (errors.password && errors.password.message)}>Sign up</button>
             </form>
+            <ToastContainer
+                newestOnTop={false}
+                rtl={false}
+                pauseOnFocusLoss
+                className={styles.toast}
+            />
         </div>
     )
 }

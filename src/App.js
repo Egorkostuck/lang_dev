@@ -14,6 +14,7 @@ import SignUp from './components/Login/SignUp';
 import Store from './context';
 import games from './components/Games/index';
 
+
 function App() {
   const [library, setLibrary] = useState(JSON.parse(localStorage.getItem('library')) || []);
   const [wordIndex, setWordIndex] = useState(0);
