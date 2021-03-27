@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from 'emailjs-com'
 
 const SignUp = (props) => {
     
@@ -43,6 +44,7 @@ const SignUp = (props) => {
             props.setUsers([...props.users, newUser]);
             localStorage.setItem('users', JSON.stringify([...props.users, newUser]));
             successToast();
+            sendEmail(newUser);
         };
         if(props.users.length !== 0) {
             props.users.find(item => (item.name === newUser.name || item.email === newUser.email) ) ? errorToast()  : addNewUser();
@@ -51,6 +53,18 @@ const SignUp = (props) => {
         }        
     };
     console.log(props.users);
+
+    const sendEmail = (newUser) => {       
+        emailjs.sendForm('service_qw82aqe', 'template_8xwzayf', newUser, 'user_fTnN5ADGWjQU2M7Ny7cjV')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        newUser.target.reset()
+        debugger
+    };
+
     return(
         <div>
             <NavLink to={'/sign-in'}>
